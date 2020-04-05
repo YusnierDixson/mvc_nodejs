@@ -12,6 +12,7 @@ const app= express();
 const tasksRoute=require('./routes/tasks_routes');
 const registrationsRoute=require('./routes/registrations_routes');
 const sessionsRoute=require('./routes/sessions_routes');
+const categoriesRoute=require('./routes/categories_routes');
 app.use(bodyParser.urlencoded({extented: true}));
 app.use(methodOverride('_method'));
 app.set('view engine','pug');
@@ -26,6 +27,7 @@ app.use(authUserMiddleware);
 app.use(tasksRoute);
 app.use(registrationsRoute);
 app.use(sessionsRoute);
+app.use(categoriesRoute);
 
 //Creamos una nueva ruta home que tenga en cuenta el inicio de sesion del usuario
 app.get('/',function(req,res){
