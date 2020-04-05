@@ -2,19 +2,19 @@ const express=require('express');
 let CategoriesController =require('../controllers/categories');
 let router=express.Router();
 
-/*router.route('/tasks').get(TasksController.index).post(TasksController.create);
+router.route('/categories').get(CategoriesController.index).post(CategoriesController.create);
 
 
-router.route('/tasks/new').get((req,res)=>{
-   res.render('tasks/new'); }).post();
+router.route('/categories/new').get((req,res)=>{
+   res.render('categories/new'); }).post();
 
-router.get('/tasks/:id/edit',TasksController.edit);
+router.get('/categories/:id/edit',CategoriesController.edit);
 
-router.route('/tasks/:id')
-.get(TasksController.show)
-.put(TasksController.update)
-.delete(TasksController.destroy);
-*/
+router.route('/categories/:id')
+.get(CategoriesController.show)
+.put(CategoriesController.update)
+.delete(CategoriesController.destroy);
+
 
 
 module.exports=router;
