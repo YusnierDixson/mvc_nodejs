@@ -6,11 +6,6 @@ html
    form(action=`/categories/${category.id}?_method=PUT` method="POST")
      input(type="text" name="title" value=category.title placeholder=category.title)
      br
-     select(name="color")
-       option(value='select' selected=(category.color=='select')) --Select--
-       option(value='azul' selected=(category.color=='azul')) Azul
-       option(value='verde' selected=(category.color=='verde')) Verde
-       option(value='rojo' selected=(category.color=='rojo')) Rojo
-       option(value='amarillo' selected=(category.color=='amarillo')) Amarillo
+     input(type="color" name="color" value=category.color) 
      br
      input(type="submit" value="Guardar")
